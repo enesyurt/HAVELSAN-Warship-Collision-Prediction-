@@ -129,16 +129,14 @@ class Radar:
 
 # Initialize ships
 ships = [
-    Ship("0001", [0, 0, 0], [10, 10, 0]),
+    Ship("0001", [-50, -50, 0], [0, 10, 0]),
     Ship("0002", [100, 100, 0], [-10, -10, 0])
 ]
 
-# Set initial last update time
 for ship in ships:
     ship.last_update = time.time()
 
-# Initialize radar
+
 radar = Radar(ships, update_interval=1, prediction_interval=1)
 
-# Run simulation
-radar.run(duration=10)
+radar.run(duration=15)
